@@ -483,15 +483,13 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
-
-<a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
-
-<br>
-
-</a>This work is licensed under a <a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+        <hr>
 
 
+<a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>This work is licensed under a <a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+
+<hr>
 <p>It is really interesting to apply deep learning into some unrelated field. Definitely unrelated, just like my major civil engineering during my undergraduate study. I was lucky to find an interdisciplinary area to combine civil and what actually interested me, deep learning and vision. I am wondering whether I was truly attracted by the beauty of machine learning algorithm and the mystery behind the neural net models or just due to the promising salary(seems to be). Anyway, this research is quite fun and give me some practice. Let’s go to the topic crack segmentation and the model CrackNet.</p>
 <img src="/2018/06/04/CrackNet/seg.png" title="Crack Segmentation">
 <p>Segmentation is a general problem in computer vision. There are too many nice model architectures nowadays for segmentation, like FCN, UNet, DeepLab… I don’t have a reason to invent a new architecture and I think UNet is a pretty good starter for this simple task. I used a UNet with 3 down-sample layer(which is smaller than the original paper). The input is RGB image while the output is binary segmentation result with the same size as the input.</p>
