@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="n0lean">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Deep Learning,PyTorch">
 
     <!-- Site Verification -->
     
@@ -70,11 +70,11 @@
     <meta property="og:title" content="PyTorch BCE Loss and BCE with logits | n0lean&#39;s Memo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Deep Learning"> <meta property="og:article:tag" content="PyTorch"> 
 
     
         <meta property="article:published_time" content="Jun 04, 2018" />
-        <meta property="article:modified_time" content="Jun 06, 2018" />
+        <meta property="article:modified_time" content="Jun 07, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "PyTorch BCE Loss and BCE with logits",
     "url": "http://n0lean.github.io/2018/06/04/PyTorch-BCE-Loss-and-BCE-with-logits/index.html",
     "datePublished": "Jun 04, 2018",
-    "dateModified": "Jun 06, 2018",
+    "dateModified": "Jun 07, 2018",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -424,7 +424,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/Deep-Learning/">Deep Learning</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/PyTorch/">PyTorch</a>
     </ul>
     
 
@@ -491,7 +491,19 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <p>A little finding in today’s work:</p>
+<p>what is the difference between sigmoid layer+ BCE loss and BCE with with logits loss?</p>
+<p>The answer is numerical stability.</p>
+<p>There are several situations we need to consider in a softmax operation.</p>
+<ol>
+<li>Underflow: when a number is rounded to 0, some operations may raise an error. E.g, divide by 0.</li>
+<li>Overflow: a number is so big and is considered to be $\inf$.</li>
+</ol>
+<p>Let’s check the softmax example.</p>
+<p>$softmax(x)_i=\frac {exp(x_i)} {\sum(exp(x_j))}$</p>
+<p>If all every $x_i = small \ constant$ </p>
+<p>$LSE(x_1, x_2,…,x_n)=log(exp(x_1)+exp(x_2)+…+exp(x_n))$</p>
+
     
 
     
@@ -683,7 +695,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">6</span></a>
             </ul>
         </li>
         
@@ -691,23 +703,28 @@
 
     <!-- Categories  -->
     
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="Tags">
                 
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                    <i class="material-icons sidebar-material-icons">view_carousel</i>
                 
-                Categories
-                <b class="caret"></b>
+                Tags
             </a>
-            <ul class="dropdown-menu">
-                <li>
-                
-            </ul>
         </li>
         
     
-
-    <!-- Pages  -->
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">update</i>
+                
+                Timeline
+            </a>
+        </li>
+        
     
 
     <!-- Article Number  -->
