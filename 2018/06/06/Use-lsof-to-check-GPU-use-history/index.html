@@ -12,7 +12,7 @@
     
     <title>
         
-            Use lsof to check GPU use history | 
+            Use lsof to check GPU use | 
         
         n0lean&#39;s Memo
     </title>
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://n0lean.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Use lsof to check GPU use history | n0lean&#39;s Memo">
+    <meta property="og:title" content="Use lsof to check GPU use | n0lean&#39;s Memo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
         <meta property="article:published_time" content="Jun 06, 2018" />
-        <meta property="article:modified_time" content="Jun 10, 2018" />
+        <meta property="article:modified_time" content="Aug 17, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Use lsof to check GPU use history | n0lean&#39;s Memo">
+    <meta name="twitter:title" content="Use lsof to check GPU use | n0lean&#39;s Memo">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -112,10 +112,10 @@
         },
         "description": "Wanna become a fat cat."
     },
-    "headline": "Use lsof to check GPU use history",
+    "headline": "Use lsof to check GPU use",
     "url": "http://n0lean.github.io/2018/06/06/Use-lsof-to-check-GPU-use-history/index.html",
     "datePublished": "Jun 06, 2018",
-    "dateModified": "Jun 10, 2018",
+    "dateModified": "Aug 17, 2018",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -343,7 +343,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Introduction-to-lsof-first-as-I-am-not-familiar-with-it"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction to lsof first (as I am not familiar with it :-(</span></a></li></ol>
+        
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -381,7 +381,7 @@
         
     
             <p class="article-headline-p">
-                Use lsof to check GPU use history
+                Use lsof to check GPU use
             </p>
         </div>
 
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Use lsof to check GPU use history&url=http://n0lean.github.io/2018/06/06/Use-lsof-to-check-GPU-use-history/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Use lsof to check GPU use&url=http://n0lean.github.io/2018/06/06/Use-lsof-to-check-GPU-use-history/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -449,7 +449,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Use lsof to check GPU use history&url=http://n0lean.github.io/2018/06/06/Use-lsof-to-check-GPU-use-history/index.html&via=n0lean" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Use lsof to check GPU use&url=http://n0lean.github.io/2018/06/06/Use-lsof-to-check-GPU-use-history/index.html&via=n0lean" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -491,8 +491,13 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Today, I met a problem that one of gpus on my server was half occupied but nvidia-smi showing no process was running on it. Really weird thing. So how can I find which process was running on it. My boss gave me a really nice solution. lsof.</p>
-<h3 id="Introduction-to-lsof-first-as-I-am-not-familiar-with-it"><a href="#Introduction-to-lsof-first-as-I-am-not-familiar-with-it" class="headerlink" title="Introduction to lsof first (as I am not familiar with it :-("></a>Introduction to lsof first (as I am not familiar with it :-(</h3>
+        <p>Sometimes, some processes may occupy GPU memory even if no process is shown in nvidia-smi. (Especially if using a multiprocessing dataloader, pytorch 0.3) How to find the true processes behind? </p>
+<p>The <strong>lsof</strong> command in Linux displays in its output information about files that are opened by processes. </p>
+<ol>
+<li>lsof /dev/nvidia0</li>
+<li>kill them</li>
+</ol>
+
     
 
     
@@ -578,7 +583,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/07/Vim-and-Vim-in-VS-Code/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/08/06/Build-a-Pytorch-Server-with-Tornado-and-Docker/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -592,7 +597,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/06/04/numpy-flatten-and-numpy-ravel-Memory-Speed/" id="post_nav-older" class="next-content">
+        <a href="/2018/06/04/numpy-flatten-ravel-and-reshape/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -684,7 +689,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
